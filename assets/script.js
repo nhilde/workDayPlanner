@@ -21,15 +21,15 @@ $(document).ready(function () {
 
     });
 
-    $(nine).text(localStorage.getItem("9"))
-    // ten.innerHTML =+ localStorage.getItem("10")
-    // eleven.innerHTML =+ localStorage.getItem("11")
-    // twelve.innerHTML =+ localStorage.getItem("12")
-    // one.innerHTML =+ localStorage.getItem("1")
-    // two.innerHTML =+ localStorage.getItem("2")
-    // three.innerHTML =+ localStorage.getItem("3")
-    // four.innerHTML =+ localStorage.getItem("4")
-    // five.innerHTML =+ localStorage.getItem("5")
+    $("#9am").val(localStorage.getItem("9am"))
+    $("#10am").val(localStorage.getItem("10am"))
+    $("#11am").val(localStorage.getItem("11am"))
+    $("#12pm").val(localStorage.getItem("12pm"))
+    $("#1pm").val(localStorage.getItem("1pm"))
+    $("#2pm").val(localStorage.getItem("2pm"))
+    $("#3pm").val(localStorage.getItem("3pm"))
+    $("#4pm").val(localStorage.getItem("4pm"))
+    $("#5pm").val(localStorage.getItem("5pm"))
 
     
 
