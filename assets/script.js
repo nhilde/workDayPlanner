@@ -6,7 +6,9 @@ $(document).ready(function () {
     $("#currentDay").text(moment().format("dddd, MMMM Do"));
     updateTime();
     $(".saveBtn").on("click", function () {
-        
+        let plannerText = document.querySelectorAll(".description").value;
+        let time = timeBlock.getAttribute("id");
+        localStorage.setItem(time, plannerText)
 
     });
 
