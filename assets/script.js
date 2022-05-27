@@ -16,7 +16,7 @@ $(document).ready(function () {
     updateTime();
     $(".saveBtn").on("click", function () {
         let plannerText = $(this).siblings(".description").val();
-        let time =  $(this).prev().attr("id")
+        let time = $(this).prev().attr("id")
         localStorage.setItem(time, plannerText)
 
     });
@@ -31,14 +31,19 @@ $(document).ready(function () {
     $("#4pm").val(localStorage.getItem("4pm"))
     $("#5pm").val(localStorage.getItem("5pm"))
 
-    
+
 
     function updateTime() {
-    const currentTime = moment().hour();
-    const blockTime = parseInt($(this).attr("id"));
+        // const currentTime = moment().hour();
+        // const blockTime = parseInt($(this).attr("id"));
+        
 
-        timeBlock.forEach(function() {
-            if(blockTime < currentTime) {
+        $(".time-block").each(function () {
+            const currentTime = moment().hour();
+            const blockTime = parseInt($(this).attr("id"));
+            console.log(blockTime)
+            console.log(currentTime)
+            if (blockTime < currentTime) {
                 $(this).addClass("past")
             } else if (blockTime === currentTime) {
                 $(this).addClass("present")
@@ -51,5 +56,5 @@ $(document).ready(function () {
         })
     }
 
-    
+
 });
